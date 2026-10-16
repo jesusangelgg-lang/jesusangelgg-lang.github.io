@@ -19,7 +19,12 @@ header {
     border-bottom: 1px solid #334155;
     padding: 15px 20px;
 }
-
+.fuente-especial {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #CC3A33;
+font-style: su;
+}
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
