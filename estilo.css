@@ -10,7 +10,6 @@ body {
     line-height: 1.7;
 }
 
-/* Header fijo moderno (Sticky) */
 header {
     position: sticky;
     top: 0;
@@ -62,7 +61,6 @@ nav a:hover {
     border-color: #38bdf8;
 }
 
-/* Distribución en Grid para aprovechar espacio */
 .dashboard-grid {
     max-width: 1200px;
     margin: 30px auto;
@@ -111,7 +109,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Tabla responsiva con scroll horizontal si es necesario */
 .table-container {
     width: 100%;
     overflow-x: auto;
@@ -161,7 +158,6 @@ tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.02);
 }
 
-/* Multimedia grid */
 .fila {
     display: flex;
     flex-wrap: wrap;
@@ -210,7 +206,6 @@ audio {
     object-fit: cover;
 }
 
-/* Formulario optimizado en dos columnas en pantallas grandes */
 form {
     width: 100%;
 }
@@ -288,7 +283,6 @@ button[type="reset"]:hover {
     color: #f8fafc;
 }
 
-/* Footer */
 footer {
     background-color: #0b1120;
     color: #94a3b8;
@@ -299,7 +293,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Ajustes especiales para celulares pequeños */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
