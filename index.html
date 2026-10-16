@@ -11,16 +11,18 @@
 <body>
 
     <header>
-        <h1>Mi página web con HTML5 y CSS3</h1>
-        <nav>
-            <a href="#texto">Texto</a>
-            <a href="#tabla">Tabla</a>
-            <a href="#multimedia">Multimedia</a>
-            <a href="#formulario">Formulario</a>
-        </nav>
+        <div class="header-content">
+            <h1>Mi página web con HTML5 y CSS3</h1>
+            <nav>
+                <a href="#texto">Texto</a>
+                <a href="#tabla">Tabla</a>
+                <a href="#multimedia">Multimedia</a>
+                <a href="#formulario">Formulario</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="dashboard-grid">
 
         <!-- FORMATO DE FUENTE Y PÁRRAFOS -->
         <section id="texto" class="contenedor">
@@ -35,46 +37,46 @@
         </section>
 
         <!-- TABLA -->
-        <section id="tabla" class="contenedor">
+        <section id="tabla" class="contenedor span-full">
             <h2>Tabla</h2>
-            <table>
-                <caption>Frutas por paquete</caption>
-                <thead>
-                    <tr>
-                        <th>Frutas</th>
-                        <th>Manzanas</th>
-                        <th>Peras</th>
-                        <th>Mangos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Manzanas</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Peras</td>
-                        <td>2</td>
-                        <td>4</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Mangos</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-container">
+                <table>
+                    <caption>Frutas por paquete</caption>
+                    <thead>
+                        <tr>
+                            <th>Frutas</th>
+                            <th>Manzanas</th>
+                            <th>Peras</th>
+                            <th>Mangos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Manzanas</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Peras</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Mangos</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <!-- IMÁGENES, VIDEO Y AUDIO -->
-        <section id="multimedia" class="contenedor">
+        <section id="multimedia" class="contenedor span-full">
             <h2>Imágenes, video y audio</h2>
-
-            <!-- DIVS -->
             <div class="fila">
                 <div class="caja">
                     <h3>Imagen</h3>
@@ -84,12 +86,12 @@
                 <div class="caja">
                     <h3>Video</h3>
                     <div class="video-responsivo">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fY-29ffETtc?si=FY17C5x5r2a-AwDh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/fY-29ffETtc?si=FY17C5x5r2a-AwDh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
 
                 <div class="caja">
-                <h3>Audio</h3>
+                    <h3>Audio</h3>
                     <audio controls>
                         <source src="nomelobalanlacalma.m4a" type="audio/mpeg">
                         Tu navegador no soporta el audio.
@@ -99,31 +101,40 @@
         </section>
 
         <!-- FORMULARIO -->
-        <section id="formulario" class="contenedor">
+        <section id="formulario" class="contenedor span-full">
             <h2>Formulario</h2>
             <form action="#" method="post">
+                <div class="form-grid">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
 
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                        <p>Sexo:</p>
+                        <div class="radio-group">
+                            <label><input type="radio" id="hombre" name="sexo" value="hombre"> Hombre</label>
+                            <label><input type="radio" id="mujer" name="sexo" value="mujer"> Mujer</label>
+                        </div>
+                    </div>
 
-                <p>Sexo:</p>
-                <label><input type="radio" id="hombre" name="sexo" value="hombre"> Hombre</label>
-                <label><input type="radio" id="mujer" name="sexo" value="mujer"> Mujer</label>
+                    <div>
+                        <p>Lenguajes que conoces:</p>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" id="html" name="lenguajes" value="html"> HTML</label>
+                            <label><input type="checkbox" id="css" name="lenguajes" value="css"> CSS</label>
+                            <label><input type="checkbox" id="js" name="lenguajes" value="js"> JavaScript</label>
+                        </div>
 
-                <p>Lenguajes que conoces:</p>
-                <label><input type="checkbox" id="html" name="lenguajes" value="html"> HTML</label>
-                <label><input type="checkbox" id="css" name="lenguajes" value="css"> CSS</label>
-                <label><input type="checkbox" id="js" name="lenguajes" value="js"> JavaScript</label>
+                        <p><label for="carrera">Carrera:</label></p>
+                        <select id="carrera" name="carrera">
+                            <option value="">-- Selecciona --</option>
+                            <option value="sistemas">Ingeniería en Sistemas</option>
+                            <option value="industrial">Ingeniería Industrial</option>
+                            <option value="electronica">Ingeniería Electrónica</option>
+                        </select>
+                    </div>
+                </div>
 
-                <p><label for="carrera">Carrera:</label></p>
-                <select id="carrera" name="carrera">
-                    <option value="">-- Selecciona --</option>
-                    <option value="sistemas">Ingeniería en Sistemas</option>
-                    <option value="industrial">Ingeniería Industrial</option>
-                    <option value="electronica">Ingeniería Electrónica</option>
-                </select>
-
-                <p style="margin-top: 20px;">
+                <p style="margin-top: 20px; text-align: center;">
                     <button type="submit">Enviar</button>
                     <button type="reset">Limpiar</button>
                 </p>
